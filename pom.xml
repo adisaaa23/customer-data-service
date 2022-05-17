@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>id.saputra.adi</groupId>
 	<artifactId>customer-data-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>customer-data-service</name>
 	<description>For Customer Data Service</description>
 	<properties>
