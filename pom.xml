@@ -74,6 +74,7 @@
 			<groupId>com.github.fppt</groupId>
 			<artifactId>jedis-mock</artifactId>
 			<version>${jdis.mock.version}</version>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
