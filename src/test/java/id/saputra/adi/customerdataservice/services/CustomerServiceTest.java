@@ -4,6 +4,7 @@ import id.saputra.adi.customerdataservice.domain.dao.CustomerDao;
 import id.saputra.adi.customerdataservice.domain.dto.CustomerDto;
 import id.saputra.adi.customerdataservice.exception.ApplicationException;
 import id.saputra.adi.customerdataservice.repository.CustomerRepository;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,6 +41,11 @@ public class CustomerServiceTest {
                         .build()
         );
         customerRepository.saveAll(customerDaos);
+    }
+
+    @After
+    public void afterTest(){
+        customerRepository.deleteAll();
     }
 
     @Test
