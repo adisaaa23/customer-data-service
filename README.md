@@ -1,5 +1,8 @@
 # Customer Data Service
 
+## Swagger Data Contract
+- http://localhost:8001/swagger-ui.html
+
 ## Requirements
 
 For building and running the application you need:
