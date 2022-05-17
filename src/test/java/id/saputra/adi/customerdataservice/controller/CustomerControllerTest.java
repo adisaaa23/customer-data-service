@@ -131,4 +131,26 @@ public class CustomerControllerTest {
                 .andReturn();
     }
 
+    @Test
+    public void deleteExpectSuccess() throws Exception {
+        when(customerService.delete(any())).thenReturn(CustomerDao.builder().build());
+        this.mockMvc.perform(delete("/customers/delete")
+                        .accept(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{}"))
+                .andExpect(status().isAccepted())
+                .andReturn();
+    }
+
+    @Test
+    public void deleteExpectException() throws Exception {
+        when(customerService.delete(any())).thenThrow(ApplicationException.class);
+        this.mockMvc.perform(delete("/customers/delete")
+                        .accept(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{}"))
+                .andExpect(status().isInternalServerError())
+                .andReturn();
+    }
+
 }
